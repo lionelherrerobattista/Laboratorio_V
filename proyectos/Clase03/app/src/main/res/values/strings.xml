@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Clase03</string>
+    <string name="tvNombre">Ingrese su nombre:</string>
+    <string name="hintNombre">Juan</string>
+    <string name="tvApellido">Ingrese su apellido:</string>
+    <string name="hintApellido">Pérez</string>
+    <string name="tvDNI">DNI:</string>
+    <string name="hintDNI">33263408</string>
+    <string name="rgSexo">Sexo:</string>
+    <string name="radioHombre">Hombre</string>
+    <string name="radioMujer">Mujer</string>
+    <string name="btnGuardar">Guardar</string>
+</resources>
