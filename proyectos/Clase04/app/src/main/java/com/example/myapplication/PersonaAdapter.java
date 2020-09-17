@@ -36,10 +36,8 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PersonaViewHolder holder, int position) {
         //Bindeamos los datos de la persona
-        TextView tvNombre = holder.itemView.findViewById(R.id.txtNombre);
-        TextView tvApellido = holder.itemView.findViewById(R.id.txtApellido);
-        tvNombre.setText(personas.get(position).getNombre());
-        tvApellido.setText(personas.get(position).getApellido());
+        holder.tvNombre.setText(personas.get(position).getNombre());
+        holder.tvApellido.setText(personas.get(position).getApellido());
 
     }
 
