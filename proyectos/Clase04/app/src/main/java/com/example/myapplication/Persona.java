@@ -3,10 +3,12 @@ package com.example.myapplication;
 public class Persona {
     private String nombre;
     private String apellido;
+    private int telefono;
 
     public Persona(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.telefono = 123456;
     }
 
     public String getNombre() {

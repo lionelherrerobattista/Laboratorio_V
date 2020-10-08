@@ -7,6 +7,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -73,11 +74,19 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
 
         if(item.getItemId() == R.id.agregarPersona) {
+            //intención de abrir una segunda activity:
             Intent i = new Intent(this, MainActivity2.class);
-            startActivity(i);
+            //Se pueden pasar datos adicionales:
+            i.putExtra("Nombre", "Matias"); //Puede viajar cualquier tipo de dato primitivo
+            i.putExtra("Telefono", 1234567);
+            startActivity(i); //Se lanza la petición a android
         } else if(item.getItemId()==android.R.id.home) {
             //Se hizo click en el botón de home
             super.finish();
+        } else if(item.getItemId()== R.id.op3) {
+            //muestro el dialog
+            DialogGenerico dialogGenerico = new DialogGenerico();
+            dialogGenerico.show(getSupportFragmentManager(), "mensajeEjemplo");
         }
 
         return super.onOptionsItemSelected(item);
