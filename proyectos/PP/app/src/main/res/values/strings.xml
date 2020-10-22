@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PrimerParcialLaboV</string>
+    <string name="tvNombre">Nombre Producto</string>
+    <string name="tvCantidad">Cantidad:</string>
+    <string name="tvPrecioUnidad">Precio unidad:</string>
+    <string name="btnEditar">Editar</string>
+</resources>
