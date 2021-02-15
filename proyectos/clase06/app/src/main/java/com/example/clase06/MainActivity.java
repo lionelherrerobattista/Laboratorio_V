@@ -1,8 +1,12 @@
 package com.example.clase06;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +27,19 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //generar contexto
+        SharedPreferences preferences = getSharedPreferences("config", Context.MODE_PRIVATE);
+        String s = preferences.getString("user", null);
+        Log.d("Usuario", "Usuario no configurado");
+
+        if(s==null) {
+            Intent i = new Intent(this, SinUserActivity.class);
+            startActivity(i);
+        } else {
+            ActionBar actionBar = super.getSupportActionBar();
+            actionBar.setTitle("Hola " + s);
+        }
 
         //Generar el handler
         this.handler = new Handler(this);
